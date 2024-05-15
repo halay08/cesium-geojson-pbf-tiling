@@ -1,0 +1,6 @@
+/dist
+/node_modules
+*.js
+*.json
+!vite.config.js
+!tsconfig.json

@@ -1,0 +1,30 @@
+{
+  "tilejson": "2.0.0",
+  "name": "maplibre",
+  "type": "baselayer",
+  "scale": "1.000000",
+  "bounds": [
+    -180,
+    -85.051129,
+    180,
+    85.05112900000002
+  ],
+  "format": "pbf",
+  "legend": "",
+  "maxzoom": 6,
+  "minzoom": 0,
+  "profile": "mercator",
+  "version": "1",
+  "generator": "MapTiler Desktop Pro 11.1-2ae5f855e2",
+  "attribution": " ",
+  "description": "",
+  "format_arguments": "",
+  "crs": "EPSG:4326",
+  "center": [
+    133.78414325715383,
+    -25.718375616430862
+  ],
+  "tiles": [
+    "https://api.mapbox.com/v4/{tileset_id}/{z}/{x}/{y}.vector.pbf?sku=101i8kmos7hzu&access_token=pk.xxx"
+  ]
+}
