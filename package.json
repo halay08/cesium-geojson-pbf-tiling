@@ -1,0 +1,20 @@
+{
+  "name": "mvt-imagery-provider-example",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "generateTileStyle": "tsc src/scripts/tileStyleGenerator.ts --outDir dist && node dist/scripts/tileStyleGenerator.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9",
+    "vite-plugin-cesium": "^1.2.22"
+  },
+  "dependencies": {
+    "cesium": "^1.106.1",
+    "mvt-imagery-provider": "^1.0.3"
+  },
+  "license": "MIT"
+}

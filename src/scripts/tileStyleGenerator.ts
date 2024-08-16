@@ -2,6 +2,7 @@ import * as path from 'path'
 import * as fs from 'fs'
 import { GeoJsonTileStyle, AdvisoryTileStyleType, GeoJsonTileStyleLayer, LayerData } from '../types'
 import { excludedRpaDataLayers, recreationalDataLayers, reocDataLayers } from './tileStyle/layers'
+import { DEFAULT_FILL_OPACITY } from './tileStyle/constants'
 
 function getStyleJsonPath(tileSetId: AdvisoryTileStyleType) {
   return `${tileSetId}_style.json`
@@ -66,7 +67,7 @@ Object.keys(sources).forEach((tileSetId: AdvisoryTileStyleType) => {
   const style = getBaseStyle(tileSetId)
 
   // Create style layers
-  const layers: GeoJsonTileStyleLayer[] = sources[tileSetId].reduce((acc, item) => {
+  style.layers = sources[tileSetId].reduce((acc, item) => {
     const layers = item.meta.map((meta) => {
       const baseLayer: Partial<GeoJsonTileStyleLayer> = {
         filter: ['all', ['==', 'severity', meta.severity]],
@@ -87,7 +88,7 @@ Object.keys(sources).forEach((tileSetId: AdvisoryTileStyleType) => {
           filter: ['all', ['==', 'severity', meta.severity]],
           paint: {
             'fill-color': meta.fillColor,
-            'fill-opacity': 0.08,
+            'fill-opacity': DEFAULT_FILL_OPACITY,
           },
           ...baseLayer,
         } as GeoJsonTileStyleLayer

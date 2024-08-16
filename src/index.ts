@@ -31,6 +31,6 @@ const viewer = new Viewer('cesiumContainer', {
 // MVTImageryProvider.fromUrl('/recreational_style.json').then((provider) => {
 //   viewer.imageryLayers.addImageryProvider(provider as any)
 // })
-MVTImageryProvider.fromUrl('/reoc_style.json').then((provider) => {
+MVTImageryProvider.fromUrl('/recreational_style.json').then((provider) => {
   viewer.imageryLayers.addImageryProvider(provider as any)
 })

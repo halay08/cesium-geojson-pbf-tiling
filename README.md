@@ -2,7 +2,7 @@
 
 This repository implements a solution to convert GEOJSON data into PBF vector tiles and then render them within a CesiumJS 3D map.
 
-![PBF rendering Demo](./pdf-rendering-demo.png)
+![PBF rendering Demo](./pbf-rendering-demo.png)
 
 Thank to [練氣士 hongfaqiu](https://github.com/hongfaqiu) for the `MVTImageryProvider` package, which have greatly assisted me in building this solution.
 
